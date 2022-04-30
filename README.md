@@ -1,0 +1,1 @@
+## This is a MERN Stack recipe sharing website. More details to follow.
