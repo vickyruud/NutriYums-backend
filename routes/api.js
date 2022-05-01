@@ -6,7 +6,7 @@ const Rating = require('../models/rating');
 
 const router = express.Router();
 
-const { signup, signin } = require('../controllers/auth');
+const { signup, signin, googlelogin } = require('../controllers/auth');
 console.log(signup);
 router.post('/signup', signup);
 router.post('/signin', signin);
@@ -66,5 +66,7 @@ router.get('/ratings', (req, res, next) => {
     })
     .catch(next);
 });
+
+router.post('/googlelogin', googlelogin)
 
 module.exports = router;
