@@ -6,6 +6,11 @@ const Rating = require('../models/rating');
 
 const router = express.Router();
 
+const { signup, signin } = require('../controllers/auth');
+console.log(signup);
+router.post('/signup', signup);
+router.post('/signin', signin);
+
 router.get('/recipes', (req, res, next) => {
   // This will return all recipes
   Recipe.find({})
